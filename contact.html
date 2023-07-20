@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Home | Josipa Bilić soprano</title>
+        <link rel="shortcut icon" href="./images/favicon.png">
+        <link rel="stylesheet" href="./styles/style.css" />
+        <link rel="stylesheet" href="./styles/contact.css" />
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <!-- HEADER -->
+            <div id="header">
+                <img id="main-home-page-image" src="./images/contact-page.png" alt="Josipa Bilić" />
+                <div id="menu-icon">&#9776;</div>
+                <div>
+                    <img id="signature-contact" src="./images/signature.png" alt="Signature" />
+                </div>
+            </div>
+            <div id="fullscreen-menu">
+              <div>
+                  <img src="./images/signature-black.png" alt="Signature" />
+                  <span id="close-icon">&times;</span>
+              </div>
+              <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="./agenda.html">Agenda</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+              </ul>
+              <div class="social-media-menu">
+                  <a href="https://www.facebook.com/example">
+                    <img src="./images/facebook-black.png" alt="Facebook" />
+                  </a>
+                  <a href="https://www.instagram.com/example">
+                    <img src="./images/instagram-black.png" alt="Instagram" />
+                  </a>
+                  <a href="https://www.youtube.com/example">
+                    <img src="./images/youtube-black.png" alt="YouTube" />
+                  </a>
+                  <span id="all-rights-reserved"></span>
+              </div>
+          </div>
+
+            <!-- CONTACT -->
+            <div id="contact">
+                <div class="centered-row">
+                    <img class="line" src="./images/horizontal-line.png" />
+                    <p>CONTACT</p>
+                    <img class="line" src="./images/horizontal-line.png" />
+                </div>
+                <div class="contact-container">
+                    <form id="contact-form">
+                        <div class="form-group">
+                          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                          <input type="text" id="lastname" name="lastname" placeholder="Enter your last name" required>
+                        </div>
+                        <div class="form-group">
+                          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                          <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+                        </div>
+                        <p>Thank you for visiting my site.</p>
+                        <button type="submit" onclick="sendEmail(event)">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+          <div class="footer-content">
+              <div class="footer-signature">
+                  <img src="./images/signature.png" alt="Signature" />
+              </div>
+              <div class="social-media">
+                  <a href="https://www.facebook.com/example">
+                      <img src="./images/facebook.png" alt="Facebook" />
+                  </a>
+                  <a href="https://www.instagram.com/example">
+                      <img src="./images/instagram.png" alt="Instagram" />
+                  </a>
+                  <a href="https://www.youtube.com/example">
+                      <img src="./images/youtube.png" alt="YouTube" />
+                  </a>
+              </div>
+          </div>
+          <div class="footer-text">
+              <span id="all-rights-reserved-footer"></span>
+          </div>
+        </div>
+    </body>
+    
+
+    <script src="./scripts/send-email.js"></script>
+    <script src="./scripts/toggle-fullscreen-menu.js"></script>
+    <script src="./scripts/all-rights-reserved.js"></script>
+</html>

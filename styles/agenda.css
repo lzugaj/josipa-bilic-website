@@ -1,0 +1,119 @@
+/*** HEADER ***/
+#header {
+  position: relative;
+  height: 200px;
+}
+
+#menu-icon {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 128px;
+  color: #000;
+  cursor: pointer;
+  line-height: 1;
+}
+
+#signature-agenda {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  max-width: 80%;
+  max-height: 80%;
+  width: 35%;
+  height: auto;
+  margin: 30px;
+}
+
+/*** MY AGENDA ***/
+.agenda {
+  display: flex;
+}
+
+.year {
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  padding: 10px;
+  color: lightgray;
+  border: 1px solid lightgray;
+  margin: 10px 20px 20px 20px;
+  height: 30px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.year.active {
+  color: #000;
+  border: 1px solid black;
+}
+
+.content-item {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.event-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 40px;
+}
+
+.event-details > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-date-container {
+  flex: 1;
+}
+
+.event-content-container {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-date {
+  text-align: left;
+  font-size: 55px;
+}
+
+.event-month {
+  font-size: 40px;
+}
+
+.event-name,
+.event-location {
+  text-align: center;
+  margin: 0;
+  margin-right: 15%;
+}
+
+.event-name {
+  font-size: 40px;
+  color: #213141;
+}
+
+.event-location {
+  font-size: 25px;
+  color: #757272;
+}
+
+.event-horizontal-line {
+  width: 90%;
+  border: 1px solid #000;
+}
+
+.last-one {
+  margin-bottom: 10vh;
+  position: relative;
+  bottom: 0;
+}

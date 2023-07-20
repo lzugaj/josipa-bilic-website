@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Home | Josipa Bilić soprano</title>
+        <link rel="shortcut icon" href="./images/favicon.png">        
+        <link rel="stylesheet" href="./styles/style.css" />
+        <link rel="stylesheet" href="./styles/agenda.css" />
+    </head>
+    <body>
+        <div id="container">
+            <!-- HEADER -->
+            <div id="header">
+                <div>
+                    <img id="signature-agenda" src="./images/signature-bordo.png" alt="Signature" />
+                </div>
+                <div id="menu-icon">&#9776;</div>
+            </div>
+            
+            <div id="fullscreen-menu">
+              <div>
+                  <img src="./images/signature-black.png" alt="Signature" />
+                  <span id="close-icon">&times;</span>
+              </div>
+              <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="./agenda.html">Agenda</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+              </ul>
+              <div class="social-media-menu">
+                  <a href="https://www.facebook.com/example">
+                    <img src="./images/facebook-black.png" alt="Facebook" />
+                  </a>
+                  <a href="https://www.instagram.com/example">
+                    <img src="./images/instagram-black.png" alt="Instagram" />
+                  </a>
+                  <a href="https://www.youtube.com/example">
+                    <img src="./images/youtube-black.png" alt="YouTube" />
+                  </a>
+                  <span id="all-rights-reserved"></span>
+              </div>
+          </div>
+
+            <!-- GALLERY -->
+            <div id="gallery">
+                <div class="centered-row">
+                    <img class="line" src="./images/horizontal-line.png" />
+                    <p>MY AGENDA</p>
+                    <img class="line" src="./images/horizontal-line.png" />
+                </div>
+            </div>
+
+            <div class="agenda">
+                <div id="current-year" class="year active" onclick="handleEventsPerYear('2023')">2023</div>
+                <div id="next-year" class="year" onclick="handleEventsPerYear('2024')">2024</div>
+            </div>
+            <div id="content">
+                <div id="current-year-agenda" class="content-item">
+                    <div class="event">
+                        <div class="event-details">
+                            <div class="event-date-container">
+                                <p class="event-date">03 <span class="event-month">apr</span></p>
+                            </div>
+                            <div class="event-content-container">
+                                <p class="event-name">Name of the event</p>
+                                <p class="event-location">Zagreb, Croatia</p>
+                            </div>
+                        </div>
+                        <div>
+                            <hr class="event-horizontal-line" />
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="event-details">
+                            <div class="event-date-container">
+                                <p class="event-date">03 <span class="event-month">apr</span></p>
+                            </div>
+                            <div class="event-content-container">
+                                <p class="event-name">Name of the event</p>
+                                <p class="event-location">Zagreb, Croatia</p>
+                            </div>
+                        </div>
+                        <div>
+                             <hr class="event-horizontal-line" />
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="event-details">
+                            <div class="event-date-container">
+                                <p class="event-date">03 <span class="event-month">apr</span></p>
+                            </div>
+                            <div class="event-content-container">
+                                <p class="event-name">Name of the event</p>
+                                <p class="event-location">Zagreb, Croatia</p>
+                            </div>
+                        </div>
+                        <div>
+                             <hr class="event-horizontal-line" />
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="event-details">
+                            <div class="event-date-container">
+                                <p class="event-date">03 <span class="event-month">apr</span></p>
+                            </div>
+                            <div class="event-content-container">
+                                <p class="event-name">Name of the event</p>
+                                <p class="event-location">Zagreb, Croatia</p>
+                            </div>
+                        </div>
+                        <div>
+                             <hr class="event-horizontal-line" />
+                        </div>
+                    </div>
+                    <div class="event last-one">
+                        <div class="event-details">
+                            <div class="event-date-container">
+                                <p class="event-date">03 <span class="event-month">apr</span></p>
+                            </div>
+                            <div class="event-content-container">
+                                <p class="event-name">Name of the event</p>
+                                <p class="event-location">Zagreb, Croatia</p>
+                            </div>
+                        </div>
+                        <div>
+                             <hr class="event-horizontal-line" />
+                        </div>
+                    </div>
+                </div>
+                <div id="next-year-agenda" class="content-item">
+                    <div class="event">
+                        <div class="event-details">
+                            <div class="event-date-container">
+                                <p class="event-date">03 <span class="event-month">apr</span></p>
+                            </div>
+                            <div class="event-content-container">
+                                <p class="event-name">Name of the event</p>
+                                <p class="event-location">Zagreb, Croatia</p>
+                            </div>
+                        </div>
+                        <div>
+                             <hr class="event-horizontal-line" />
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="event-details">
+                            <div class="event-date-container">
+                                <p class="event-date">03 <span class="event-month">apr</span></p>
+                            </div>
+                            <div class="event-content-container">
+                                <p class="event-name">Name of the event</p>
+                                <p class="event-location">Zagreb, Croatia</p>
+                            </div>
+                        </div>
+                        <div>
+                             <hr class="event-horizontal-line" />
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="event-details">
+                            <div class="event-date-container">
+                                <p class="event-date">03 <span class="event-month">apr</span></p>
+                            </div>
+                            <div class="event-content-container">
+                                <p class="event-name">Name of the event</p>
+                                <p class="event-location">Zagreb, Croatia</p>
+                            </div>
+                        </div>
+                        <div>
+                             <hr class="event-horizontal-line" />
+                        </div>
+                    </div>
+                    <div class="event last-one">
+                        <div class="event-details">
+                            <div class="event-date-container">
+                                <p class="event-date">03 <span class="event-month">apr</span></p>
+                            </div>
+                            <div class="event-content-container">
+                                <p class="event-name">Name of the event</p>
+                                <p class="event-location">Zagreb, Croatia</p>
+                            </div>
+                        </div>
+                        <div>
+                             <hr class="event-horizontal-line" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-signature">
+                    <img src="./images/signature.png" alt="Signature" />
+                </div>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/example">
+                        <img src="./images/facebook.png" alt="Facebook" />
+                    </a>
+                    <a href="https://www.instagram.com/example">
+                        <img src="./images/instagram.png" alt="Instagram" />
+                    </a>
+                    <a href="https://www.youtube.com/example">
+                        <img src="./images/youtube.png" alt="YouTube" />
+                    </a>
+                </div>
+            </div>
+            <div class="footer-text">
+                <span id="all-rights-reserved-footer"></span>
+            </div>
+        </div>
+    </body>
+
+    <script src="./scripts/toggle-fullscreen-menu.js"></script>
+    <script src="./scripts/all-rights-reserved.js"></script>
+    <script src="./scripts/agenda-events-per-year.js"></script>
+</html>

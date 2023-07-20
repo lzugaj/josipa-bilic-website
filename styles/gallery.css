@@ -1,0 +1,56 @@
+/*** HEADER ***/
+#header {
+  position: relative;
+  height: 200px;
+}
+
+#menu-icon {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 128px;
+  color: #000;
+  cursor: pointer;
+  line-height: 1;
+}
+
+#signature-gallery {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  max-width: 80%;
+  max-height: 80%;
+  width: 35%;
+  height: auto;
+  margin: 30px;
+}
+
+
+/*** GALLERY ***/
+#scroll-container {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.image-wrapper {
+  flex: 0 0 auto;
+  margin-right: 10px;
+}
+
+.image-wrapper img {
+  width: 900px;
+  height: 700px;
+  object-fit: contain;
+  margin: 15px;
+}
+
+.event-row {
+  margin-bottom: 50px;
+}
+
+.description {
+  margin: 10px 0px 15px 30px;
+  font-size: 12px;
+}
