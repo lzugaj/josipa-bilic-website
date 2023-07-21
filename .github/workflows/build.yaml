@@ -1,0 +1,14 @@
+name: Development workflow
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    name: 'Deploy to Netifly'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: jsmrcaga/action-netlify-deploy@v2.0.0
+        with:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETIFLY_SITE_ID }}
