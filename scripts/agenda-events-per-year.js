@@ -1,23 +1,29 @@
-document.getElementById("current-year").classList.add("active");
-document.getElementById("current-year-agenda").style.display = "block";
+function setActive(elementId) {
+  const elements = document.getElementsByClassName("year");
+  for (const element of elements) {
+    element.classList.remove("active");
+  }
+  document.getElementById(elementId).classList.add("active");
+}
+
+function setDisplay(elementId, displayValue) {
+  const elements = document.getElementsByClassName("content-item");
+  for (const element of elements) {
+    element.style.display = "none";
+  }
+  document.getElementById(elementId).style.display = displayValue;
+}
 
 function handleEventsPerYear(year) {
-    const years = document.getElementsByClassName("year");
-    const contentItems = document.getElementsByClassName("content-item");
-
-    for (let i = 0; i < years.length; i++) {
-        years[i].classList.remove("active");
-    }
-
-    for (let i = 0; i < contentItems.length; i++) {
-        contentItems[i].style.display = "none";
-    }
-
-    if (year === '2023') {
-        document.getElementById('current-year').classList.add("active");
-        document.getElementById('current-year-agenda').style.display = "block";
-    } else {
-        document.getElementById('next-year').classList.add("active");
-        document.getElementById('next-year-agenda').style.display = "block";
-    }
+  if (year === "2023") {
+    setActive("current-year");
+    setDisplay("current-year-agenda", "block");
+  } else {
+    setActive("next-year");
+    setDisplay("next-year-agenda", "block");
+  }
 }
+
+// Initial setup
+setActive("current-year");
+setDisplay("current-year-agenda", "block");

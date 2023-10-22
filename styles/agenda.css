@@ -11,24 +11,18 @@
   font-size: 128px;
   color: #000000;
   cursor: pointer;
-  line-height: 1;
-}
-
-#signature-agenda {
-  position: absolute;
-  top: 40%;
-  left: 20%;
-  transform: translate(-50%, -50%);
-  max-width: 80%;
-  max-height: 80%;
-  width: 35%;
-  height: auto;
-  margin: 30px;
 }
 
 /*** MY AGENDA ***/
+#performances-container {
+  margin-top: 45%;
+}
+
 .agenda {
+  margin-top: 5%;
   display: flex;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .year {
@@ -36,8 +30,8 @@
   text-align: center;
   cursor: pointer;
   padding: 10px;
-  color: #C1C1C1;
-  border: 1px solid #C1C1C1;;
+  color: #c1c1c1;
+  border: 1px solid #c1c1c1;
   margin: 10px 20px 20px 20px;
   height: 30px;
   padding: 20px;
@@ -54,6 +48,8 @@
   text-align: center;
   margin-top: 20px;
   font-weight: bold;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .event-details {

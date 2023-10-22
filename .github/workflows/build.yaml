@@ -5,7 +5,7 @@ on:
       - master
 jobs:
   build:
-    name: 'Deploy to Netifly'
+    name: "Deploy to Netifly"
     runs-on: ubuntu-latest
     steps:
       - uses: jsmrcaga/action-netlify-deploy@v2.0.0

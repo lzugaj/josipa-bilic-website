@@ -1,41 +1,25 @@
-let performanceVideo = [
-    'https://www.youtube.com/embed/nFxjaVmFj5E',
-    'https://www.youtube.com/embed/C2NLPQTvO9M',
-    'https://www.youtube.com/embed/p485kUNpPvE'
+const performanceVideoUrls = [
+  "https://www.youtube.com/embed/nFxjaVmFj5E",
+  "https://www.youtube.com/embed/C2NLPQTvO9M",
+  "https://www.youtube.com/embed/p485kUNpPvE",
 ];
+
 let currentVideoIndex = 0;
 
-function handlePerformanceVideos() {
-    let previousVideoElement = document.getElementById('left-arrow');
-    let nextVideoElement = document.getElementById('right-arrow');
+const previousVideoElement = document.getElementById("left-arrow");
+const nextVideoElement = document.getElementById("right-arrow");
+const iframeElement = document.getElementById("performance-iframe");
 
-    previousVideoElement.addEventListener('click', switchToPreviousVideo);
-    nextVideoElement.addEventListener('click', switchToNextVideo);
-}
+previousVideoElement.addEventListener("click", () => switchVideo(-1));
+nextVideoElement.addEventListener("click", () => switchVideo(1));
 
-function switchToPreviousVideo() {
-    if (currentVideoIndex === 0) {
-        currentVideoIndex = performanceVideo.length - 1;
-    } else {
-        currentVideoIndex--;
-    }
-
-    updateVideoSource();
-}   
-
-function switchToNextVideo() {
-    if (currentVideoIndex === performanceVideo.length - 1) {
-        currentVideoIndex = 0;
-    } else {
-        currentVideoIndex++;
-    }
-
-    updateVideoSource();
+function switchVideo(offset) {
+  currentVideoIndex =
+    (currentVideoIndex + offset + performanceVideoUrls.length) %
+    performanceVideoUrls.length;
+  updateVideoSource();
 }
 
 function updateVideoSource() {
-    let iframeElement = document.getElementById('performance-iframe');
-    iframeElement.src = performanceVideo[currentVideoIndex];
+  iframeElement.src = performanceVideoUrls[currentVideoIndex];
 }
-
-handlePerformanceVideos();
