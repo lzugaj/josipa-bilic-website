@@ -142,25 +142,17 @@ body {
   color: #213141;
 }
 
-.lower-centered-row {
-  margin: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.lower-centered-row button {
+  display: block;
+  width: 90%;
+  margin: 5% auto;
+  height: 100px;
+  background-color: #825d1e;
+  color: #fff;
+  border-radius: 6px;
+  border: 1px solid #213141;
   text-align: center;
-}
-
-.lower-centered-row a {
-  margin-bottom: 10px;
-  font-size: 30px;
-  text-decoration: none;
-  color: #793232;
-}
-
-.lower-centered-row img.line {
-  width: 85px;
-  color: #793232;
+  font-size: 28px;
 }
 
 .arrow-container {
