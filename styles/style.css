@@ -1,7 +1,102 @@
-body {
+:root {
+  /* Black color */
+  --black-color: rgba(0, 0, 0, 1);
+
+  /* White color */
+  --white-color: rgba(255, 255, 255, 1);
+  /* Tuscan Red color */
+  --tuscan-color: #793232;
+  /* Midnight color */
+  --midnight-color: #213141;
+  /* Hot Curry color */
+  --curry-color: #825d1e;
+  /* Nicker color */
+  --nickel-color: #757272;
+
+  /* Body font */
+  --ff-primary: "Book Antiqua", sans-serif;
+
+  /* Title font size */
+  --title-size: 40px;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
   margin: 0;
-  overflow-x: hidden;
-  font-family: Book Antiqua;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+html {
+  scroll-padding-top: 6.8vh;
+  scroll-behavior: smooth;
+}
+
+body {
+  /* margin: 0;
+  overflow-x: hidden; */
+  font-family: var(--ff-primary);
 }
 
 .container {
@@ -12,14 +107,33 @@ body {
   position: relative;
 }
 
+#header {
+  position: relative;
+}
+
 #main-home-page-image {
   max-width: 87%;
-  height: auto;
   transform: scale(1.3);
 }
 
+#menu-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 96px;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+#signature {
+  position: absolute;
+  top: 38%;
+  right: 5%;
+  width: 35%;
+}
+
 .short-about-me {
-  margin-top: 15%;
+  margin-top: 10%;
   align-items: center;
   justify-content: center;
   text-align: justify;
@@ -27,27 +141,11 @@ body {
   margin-right: 5%;
 }
 
-.short-about-me-title {
-  text-align: center;
-  font-size: 16px;
-  font-weight: bold;
-  color: #793232;
-  margin-bottom: 2%;
-}
-
 .short-about-me-text {
-  color: #213141;
-  font-size: 14px;
+  color: var(--midnight-color);
+  font-size: 13px;
   font-weight: normal;
-}
-
-#menu-icon {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  font-size: 128px;
-  color: white;
-  cursor: pointer;
+  text-align: justify;
 }
 
 #header button {
@@ -55,23 +153,12 @@ body {
   width: 90%;
   margin: 5% auto;
   height: 100px;
-  background-color: #825d1e;
-  color: #fff;
+  background-color: var(--curry-color);
+  color: var(--white-color);
   border-radius: 6px;
-  border: 1px solid #213141;
+  border: 1px solid var(--midnight-color);
   text-align: center;
-  font-size: 28px;
-}
-
-#signature {
-  position: absolute;
-  top: 25%;
-  right: -13%;
-  transform: translate(-50%, -50%);
-  max-width: 100%;
-  width: 35%;
-  height: auto;
-  filter: brightness(0) invert(1);
+  font-size: 32px;
 }
 
 #upcoming-events {
@@ -86,9 +173,12 @@ body {
 }
 
 .centered-row p {
-  font-size: 40px;
+  font-size: var(--title-size);
+  color: var(--tuscan-color);
   font-weight: bold;
-  color: #793232;
+  text-align: center;
+  margin-bottom: 2%;
+  margin-top: 2%;
 }
 
 .event-container div {
@@ -97,19 +187,55 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #793232;
+  border: 1px solid var(--midnight-color);
   margin-left: 5%;
   margin-right: 5%;
+}
+
+.lower-centered-row {
+  text-align: center;
+}
+
+.lower-centered-row a {
+  color: var(--curry-color);
+  font-size: 30px;
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: 2px solid var(--curry-color);
+  font-weight: 600;
+}
+
+.left-span {
+  text-align: left;
+  font-size: 45px;
+  font-weight: 700;
+  color: var(--tuscan-color);
+}
+
+.center-span {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 800;
+  margin-left: 5%;
+  color: var(--midnight-color);
+}
+
+.right-span {
+  text-align: right;
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--midnight-color);
 }
 
 #reviews {
   margin-top: 5%;
   margin-bottom: 5%;
-  background-color: #233041;
-  color: white;
+  background-color: var(--midnight-color);
+  color: var(--white-color);
   padding: 5%;
   font-style: italic;
   text-align: center;
+  font-size: 13px;
 }
 
 .reviews-container p:last-child {
@@ -122,39 +248,6 @@ body {
   margin-right: 5%;
 }
 
-.left-span {
-  text-align: left;
-  font-size: 45px;
-  color: #793232;
-}
-
-.center-span {
-  text-align: center;
-  font-size: 35px;
-  font-weight: bold;
-  margin-left: 10%;
-  color: #213141;
-}
-
-.right-span {
-  text-align: right;
-  font-size: 30px;
-  color: #213141;
-}
-
-.lower-centered-row button {
-  display: block;
-  width: 90%;
-  margin: 5% auto;
-  height: 100px;
-  background-color: #825d1e;
-  color: #fff;
-  border-radius: 6px;
-  border: 1px solid #213141;
-  text-align: center;
-  font-size: 28px;
-}
-
 .arrow-container {
   display: flex;
   justify-content: space-between;
@@ -163,7 +256,7 @@ body {
 }
 
 .arrow {
-  color: black;
+  color: var(--black-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -206,6 +299,23 @@ body {
   height: auto;
 }
 
+.photos-galler-link button {
+  display: block;
+  width: 90%;
+  margin: 5% auto;
+  height: 100px;
+  background-color: var(--curry-color);
+  color: var(--white-color);
+  border-radius: 6px;
+  border: 1px solid var(--midnight-color);
+  text-align: center;
+}
+
+.photos-galler-link a {
+  text-decoration: none;
+  font-size: 32px;
+}
+
 #fullscreen-menu {
   display: none;
   position: fixed;
@@ -213,15 +323,29 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #f8f8f8;
+  background-color: var(--midnight-color);
   z-index: 9999;
   padding: 20px;
   box-sizing: border-box;
 }
 
+#signature-and-close {
+  margin-top: 5%;
+}
+
 #fullscreen-menu img {
   margin: 30px;
   width: 50%;
+}
+
+#close-icon {
+  top: 1.5%;
+  margin-right: 5%;
+  position: absolute;
+  right: 10px;
+  font-size: 96px;
+  cursor: pointer;
+  color: var(--white-color);
 }
 
 #fullscreen-menu ul {
@@ -237,19 +361,10 @@ body {
 
 #fullscreen-menu ul li a {
   margin: 50px;
-  color: #793232;
+  color: var(--white-color);
   text-decoration: none;
   font-size: 64px;
   font-weight: bold;
-}
-
-#close-icon {
-  margin: 30px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 76px;
-  cursor: pointer;
 }
 
 .social-media-menu {
@@ -276,26 +391,22 @@ body {
 .social-media-menu span {
   display: block;
   text-align: center;
-  font-size: 24px;
-  color: #333;
+  font-size: 28px;
+  color: var(--white-color);
   width: 100%;
   margin-top: 10px;
 }
 
-/* Footer */
 .footer {
-  background-color: #233041;
-  padding: 20px;
-  color: white;
+  background-color: var(--midnight-color);
+  color: var(--white-color);
 }
 
-/* Footer content */
 .footer-content {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
-  margin-top: 40px;
+  justify-content: space-between;
+  padding: 7% 5% 0% 5%;
 }
 
 .footer-signature img {
@@ -303,13 +414,21 @@ body {
   max-width: 500px;
 }
 
-/* Social media icons in the footer */
+.social-media {
+  display: flex;
+  align-items: center;
+}
+
+.social-media a {
+  margin-left: 10px;
+}
+
 .social-media a img {
-  height: 64px;
+  height: 80px;
+  width: 80px;
   opacity: 0.7;
-  width: 64px;
-  background-color: transparent;
   padding: 15px;
+  background-color: transparent;
 }
 
 .footer-text {
@@ -317,7 +436,6 @@ body {
 }
 
 .footer-text span {
-  color: white;
-  font-size: 12px;
-  color: #757272;
+  font-size: 13px;
+  color: var(--nickel-color);
 }
