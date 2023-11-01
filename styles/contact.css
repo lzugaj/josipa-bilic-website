@@ -7,10 +7,10 @@
 
 #menu-icon {
   position: absolute;
-  top: 30px;
-  right: 30px;
-  font-size: 128px;
-  color: #fff;
+  top: 15px;
+  right: 20px;
+  font-size: 96px;
+  color: var(--white-color);
   cursor: pointer;
 }
 
@@ -36,7 +36,7 @@ textarea {
   margin: 20px;
   padding: 35px;
   border: 1px solid #213141;
-  font-size: 25px;
+  font-size: 35px;
 }
 
 #contact-form p {

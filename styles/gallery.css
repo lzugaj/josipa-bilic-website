@@ -6,10 +6,10 @@
 
 #menu-icon {
   position: absolute;
-  top: 30px;
-  right: 30px;
-  font-size: 128px;
-  color: #000;
+  top: 15px;
+  right: 20px;
+  font-size: 96px;
+  color: var(--white-color);
   cursor: pointer;
 }
 
