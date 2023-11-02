@@ -1,4 +1,8 @@
 /*** HEADER ***/
+body {
+  font-family: var(--ff-primary);
+}
+
 #header {
   position: relative;
   height: 200px;
@@ -30,15 +34,15 @@
   text-align: center;
   cursor: pointer;
   padding: 10px;
-  color: #c1c1c1;
-  border: 1px solid #c1c1c1;
+  color: var(--nickel-color);
+  border: 1px solid var(--nickel-color);
   margin: 10px 20px 20px 20px;
   font-size: 30px;
 }
 
 .year.active {
-  color: #000000;
-  border: 1px solid #000000;
+  color: var(--black-color);
+  border: 1px solid var(--black-color);
 }
 
 .content-item {
@@ -78,12 +82,12 @@
 .event-date {
   text-align: left;
   font-size: 55px;
-  color: #793232;
+  color: var(--tuscan-color);
 }
 
 .event-month {
   font-size: 40px;
-  color: #793232;
+  color: var(--tuscan-color);
 }
 
 .event-name,
@@ -95,17 +99,17 @@
 
 .event-name {
   font-size: 40px;
-  color: #213141;
+  color: var(--midnight-color);
 }
 
 .event-location {
   font-size: 25px;
-  color: #757272;
+  color: var(--midnight-color);
 }
 
 .event-horizontal-line {
   width: 90%;
-  border: 1px solid #000000;
+  border: 1px solid var(--black-color);
 }
 
 .last-one {
