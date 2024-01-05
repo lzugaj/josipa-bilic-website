@@ -5,8 +5,8 @@ function handleAllRightReservedYear() {
   );
   let getCurrentYear = new Date().getFullYear();
 
-  allRightsReservedElement.innerText = `All rights reserved @${getCurrentYear}`;
-  allRightsReservedFooterElement.innerText = `All rights reserved @${getCurrentYear}`;
+  allRightsReservedElement.innerText = `All rights reserved @ ${getCurrentYear}`;
+  allRightsReservedFooterElement.innerText = `All rights reserved @ ${getCurrentYear}`;
 }
 
 handleAllRightReservedYear();
